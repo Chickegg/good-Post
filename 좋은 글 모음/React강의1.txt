@@ -1,0 +1,142 @@
+Express Node.js환경에서 웹서버를 쉽게열도록 해주는 것이다.
+MongoDB 인기있는 NoSQL데이터베이스 이고
+mongoose MongoDB를 간편하게 사용할수있게하는 프레임워크이다.
+
+만들게 될 프로젝트
+1.전화번호부
+서버와 동기화하지않는다.
+
+2.카운터(Redux)
+
+3.무한 스크롤형 메모패드
+facebook이나 instagram 처럼 아래로 스크롤할수록 다음 데이터를 보여주는것이다.
+3-1 간단한 외원인증도 구현할 것이다.
+작성수정삭제 까지 해본다.
+검색기능도 포함.
+
+
+2. React js  
+JavaScript 어플리케이션을 어떻게 <b>구조화</b> 할까?
+
+리엑트는 프레임워크가 아니라 라이브러리이다.
+frame은 틀이다. 단점 틀에서 벗어 나기가 힘들다. 다른 프레임워크랑 충돌할 가능성이 높다.
+
+라이브러리는 필요한곳에 내가 찾아서 쓰면되고 다른곳이랑 충돌할 일도 적다.
+
+Angular를 대체 할 수 있을까?
+아니요 Angular는 framework 이고 React.js는 라이브러리다.
+둘이 더 좋네 라기보다는 둘 다 사용해보고 필요한곳에 적절하게 사용하는 것이 좋다.
+
+Virtual DOM 가상의 돔을 이용한다.
+
+처리해야할 데이터가 많아질경우 직접돔을 수정할경우 시간이 오래걸린다.
+
+즉 클라이언트가 이렇게이렇게이렇게해서주세요 하면 그것을 만든다음에 React라는 로봇에게 주기만하면
+로봇에 저장되어있는 DOM이랑 비교해서 알아서 바꿔준다.
+
+
+
+장점 1. 배우기 간단하다.
+2. 뛰어난 Garbage Collection ,메모리 관리, 성능;
+서버 & 클라이언트 렌더링 둘다 지원한다.
+검색엔진최적화
+매우 간편한 UI 수정 및 재사용
+다른 프레임워크나 라이브러리와 <b>혼용</b>가능
+
+단점 1.VIEW ONLY : 보여지는 부분만 관리한다.
+2.IE8 이하 지원 X 꼭 지원하려면 React.js v.14이하를 사용하면된다.
+3.
+
+======================
+
+섹션2 React.js 시작하기
+https://codepen.io/pen/
+
+Babel javascript ES6 로 사용할 것이기 때문에 이전 문법 ES6 => ES5 
+그 이유 구버전 에서는 ES6를 지원하지 않기때문이다.
+
+React는 Compodent
+React는 렌더링 부분을 담당한다.
+15 버전 이상부터는 2개의 파일을 불러와야한다.
+
+ES6 Class선언하는법
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes
+1.메서드만 사용할 수있다. 
+2.변수를 사용할 떄는 이니셜을 정해줘야한다.
+3클래스를 먼저 선언해줘야한다.
+4.상속가능하다.
+5.super키워드.
+
+JSX?
+javasciprt code에서 HTML 그대로 사용 할 수 있다. 
+"" 같은것들이 필요없다.
+()를 사용하지 않아도 오류는 발생하지 않지만 가독성을 위하여 사용한다.
+
+모든 JSX 코드는 container element 안에 포함시켜줘야한다.
+
+render() {
+	return{
+	<h1>Hi</h1>
+	<h2>i am Error</h2>
+   )
+}
+*** 이러면 Error가 발생한다.
+
+render() {
+         <div>
+	return{
+	<h1>Hi</h1>
+	<h2>i am Error</h2>
+         </div>
+   )
+}
+**** 이런식으로 container element안에 포함시켜줘야한다.
+
+2.JavaScript Expression
+만일 let text = "Hello React!";
+했을 겨우
+return ( 
+	<div>{text}</div> 이런식으로 {}qmfkzpt{}으로 랩핑해준다.(감싸준다.
+);
+
+3. Inline Style 스타일을 설정할때는 
+원래는 backgroundcolor인데 JSX에서는 backgroundColor 즉 대문자가 나와야한다.
+
+4.Comments 주석을 사용할 때는 
+{/* ... */} 을 사용한다.
+주석또한 container element안에 작성되어야한다. 그렇지않으면 오류가발생한다.
+
+
+2021.07.02 
+
+class Codelab extends React.Component {
+  render() {
+      let text = 'Hi i am codelab';
+      let style = {
+        backgroundColor:'aqua'
+      };
+    
+   return(
+     <div style = {style}>
+     {text}
+       좋은 하루이구만 그래
+      React CodeLab
+     </div>
+   );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Codelab/>
+    );
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+
+
+
+
+
