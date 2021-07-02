@@ -2,4 +2,4 @@
 참고할만한 게시물 또는 문서 등을 모아둔 저장공간입니다.
 
 <React><br>
-https://brunch.co.kr/@eight-two-five/15 (vsCode 초기설정법)<br>
+https://brunch.co.kr/@eight-two-five/15 (개발환경 Setting)<br>
