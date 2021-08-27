@@ -22,3 +22,8 @@ https://syoung-journey.tistory.com/30<br>
 <h2>etc</h2><br>
 https://dev-dain.tistory.com/50<br>
 (API 개념정리)
+
+프론트엔드 
+---
+<ul>
+ <li><a href="https://github.com/ParkSB/Front-End-Performance-Checklist?fbclid=IwAR0M9DqKnaPOYpo48jBhA19sm59Eb5wB8zWyYuj3aD6KiBp-2T9L4ynFmeo">성능 체크 리스트</li>
